@@ -48,7 +48,7 @@ public class NgramUtil {
 				for (int i = getSequenceSize(ngram)-order ; i < getSequenceSize(ngram)-1; i++) {
 					ret_String += splitted[i].toString()+" ";
 				}
-				ret_String.trim();//deletting that extra spce
+				ret_String = ret_String.trim();//deletting that extra spce
 			}
 
 		}
@@ -82,7 +82,7 @@ public class NgramUtil {
 			for (int i = 0; i <= it_order; i++) {
 				ngram+= splitted[i]+" ";
 			}
-			ngram.trim();
+			ngram = ngram.trim();
 			returned_list.add(ngram);
 			it_order++;
 		}
@@ -94,7 +94,7 @@ public class NgramUtil {
 			for (it_order = i; it_order < i + order; it_order++) {
 				ngram+= splitted[it_order]+" ";
 			}
-			ngram.trim();
+			ngram = ngram.trim();
 			returned_list.add(ngram);//cutting extra space at the end
 		}
 		return returned_list;
@@ -140,7 +140,7 @@ public class NgramUtil {
 				for (it_order = i; it_order < i + order; it_order++) {
 					ngram+= splitted[it_order]+" ";
 				}
-				ngram.trim();
+				ngram = ngram.trim();
 				returned_list.add(ngram);//we cut the last car because it is an extra space
 			}
 		}
