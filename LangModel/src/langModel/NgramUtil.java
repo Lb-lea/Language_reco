@@ -44,9 +44,9 @@ public class NgramUtil {
 			String[] splitted  = ngram.split("\\s+");
 			if(splitted.length >1)//otherwise there is no history
 			{
-				// We read the ngram from [size-order]until the beforelast index
-				for (int i = getSequenceSize(ngram)-order ; i < getSequenceSize(ngram)-1; i++) {
-					ret_String += splitted[i].toString()+" ";
+				// We read the ngram from [size-order or 0]until the beforelast index
+				for (int i = Math.max(getSequenceSize(ngram)-order,0) ; i < getSequenceSize(ngram)-1; i++) {
+					ret_String += splitted[i]+" ";
 				}
 				ret_String = ret_String.trim();//deletting that extra spce
 			}
