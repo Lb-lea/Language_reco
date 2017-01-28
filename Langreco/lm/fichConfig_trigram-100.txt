@@ -1,0 +1,10 @@
+en	en_tri	lm/trigram-100-train-en.lm
+fr	fr_tri	lm/trigram-100-train-fr.lm
+da	da_tri	lm/trigram-100-train-da.lm
+de	de_tri	lm/trigram-100-train-de.lm
+es	es_tri	lm/trigram-100-train-es.lm
+et	et_tri	lm/trigram-100-train-et.lm
+lv	lv_tri	lm/trigram-100-train-lv.lm
+nl	nl_tri	lm/trigram-100-train-nl.lm
+pl	pl_tri	lm/trigram-100-train-pl.lm
+sv	sv_tri	lm/trigram-100-train-sv.lm

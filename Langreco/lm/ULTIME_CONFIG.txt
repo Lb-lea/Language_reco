@@ -1,0 +1,2 @@
+lm/fichConfig_bigram-100.txt
+lm/fichConfig_trigram-100.txt
