@@ -1,0 +1,6 @@
+LangModel/.idea/artifacts/LangModel_jar.xml
+*.xml
+LangModel/out/production/LangModel/langModel/LanguageModel.class
+*.class
+Langreco/Langreco.iml
+*.iml
