@@ -15,13 +15,13 @@ public class TestRuns {
         String goldSentPath = "data/gold/test-sent.txt";
         //test with
         LanguageRecognizer my1 = new MyLanguageRecognizer1("lm/fichConfig_trigram-100.txt");
-        LanguageRecognizer my2 = new MyLanguageRecognizer2("lm/ULTIME_CONFIG.txt");
-        LanguageRecognizer my3 = new MyLanguageRecognizer3("lm/ULTIME_CONFIG.txt");
+        //LanguageRecognizer my2 = new MyLanguageRecognizer2("lm/ULTIME_CONFIG.txt");
+        //LanguageRecognizer my3 = new MyLanguageRecognizer3("lm/ULTIME_CONFIG.txt");
 
-        String hypLangFilePath = "data/gold/test-sent-hyp.txt";
-        my1.recognizeFileLanguage(goldSentPath, hypLangFilePath+"1");
-        //my2.recognizeFileLanguage(goldSentPath, hypLangFilePath+"2");
-        //my3.recognizeFileLanguage(goldSentPath, hypLangFilePath+"3");
+        String hypLangFilePath = "data/gold/test-sent-hyp";
+        my1.recognizeFileLanguage(goldSentPath, hypLangFilePath+"1.txt");
+        //my2.recognizeFileLanguage(goldSentPath, hypLangFilePath+"2.txt");
+        //my3.recognizeFileLanguage(goldSentPath, hypLangFilePath+"3.txt");
 
     }
 
