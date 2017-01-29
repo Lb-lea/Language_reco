@@ -7,7 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyLanguageRecognizer1Log extends LanguageRecognizer {
-/**This language recogniser can handle one language model( be it bigram, trigram ..)**/
+/**This language recogniser can handle one language model( be it bigram, trigram ..)
+ * and uses logarithmic probabilities**/
 	private HashMap<String, LanguageModel> models;
 
 	public MyLanguageRecognizer1Log(String fileParam){

@@ -1,0 +1,14 @@
+</s>	2
+Ce	1
+genial	1
+<s>	2
+est	1
+bonjour </s>	1
+Ce cours	1
+cours	1
+bonjour	1
+<s> Ce	1
+cours est	1
+est genial	1
+<s> bonjour	1
+genial </s>	1

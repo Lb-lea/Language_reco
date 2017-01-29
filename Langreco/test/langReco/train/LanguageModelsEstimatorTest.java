@@ -10,9 +10,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-import langReco.eval.Performance;
-import langModel.LanguageModel;
-import langModel.MyLaplaceLanguageModel;
 import langModel.MyNgramCounts;
 import langModel.NgramCounts;
 
@@ -21,7 +18,7 @@ import langModel.NgramCounts;
  *
  */
 public class LanguageModelsEstimatorTest {
-	
+	//On utilisera ces chemins souvent par la suite donc on les déclare ici
 	public static String trainEnFilePath ="data/train/train-en.txt";
 	public static String trainFrFilePath ="data/train/train-fr.txt";
 	public static String trainDaFilePath ="data/train/train-da.txt";
@@ -90,10 +87,9 @@ public class LanguageModelsEstimatorTest {
 	@Test
 	public void testCreateLmWordLangDeOrder3() {
 		NgramCounts deNgramCounts3 = new MyNgramCounts();
-		String trainDeFilePath = "data/train/train-de.txt";
 		deNgramCounts3.scanTextFile(trainDeFilePath, 3);
-		String lmDeFilePath = "lm/trigram-100-train-de.lm";
-		deNgramCounts3.writeNgramCountFile(lmDeFilePath);		
+		String lmDeFilePath3 = "lm/trigram"+lmDeFilePath;
+		deNgramCounts3.writeNgramCountFile(lmDeFilePath3);
 	}
 	
 	/**
@@ -104,10 +100,9 @@ public class LanguageModelsEstimatorTest {
 	@Test
 	public void testCreateLmWordLangEsOrder3() {
 		NgramCounts esNgramCounts3 = new MyNgramCounts();
-		String trainEsFilePath = "data/train/train-es.txt";
 		esNgramCounts3.scanTextFile(trainEsFilePath, 3);
-		String lmEsFilePath = "lm/trigram-100-train-es.lm";
-		esNgramCounts3.writeNgramCountFile(lmEsFilePath);		
+		String lmEsFilePath3 = "lm/trigram"+lmEsFilePath;
+		esNgramCounts3.writeNgramCountFile(lmEsFilePath3);
 	}
 	
 	/**
@@ -178,6 +173,7 @@ public class LanguageModelsEstimatorTest {
 	
 	@Test
 	public void testConfigTrigram(){
+		//On crée un fichier de configuration pour les trigrams
 		try{
 			FileWriter fw = new FileWriter("lm/fichConfig_trigram-100.txt");
 				fw.append("en\ten_tri\tlm/trigram"+lmEnFilePath+"\n");
@@ -199,6 +195,7 @@ public class LanguageModelsEstimatorTest {
 	
 	@Test
 	public void testConfigAll(){
+		//On crée un fichier qui répertorie les deux fichiers de configuration bigram et trigram
 		try{
 			FileWriter fw = new FileWriter("lm/ULTIME_CONFIG.txt");
 				fw.append("fichConfig_bigram-100.txt\n");

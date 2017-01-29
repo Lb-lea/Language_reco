@@ -7,15 +7,16 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**This LM is able to compute 2 or more level of language models.*/
+/**This Language recognizer is able to compute 2 or more level of language models
+ * and has a minimum probability to detect unknown language
+ * and uses logarithmic probabilities*/
+
+
 public class MyLanguageRecognizer2Log extends LanguageRecognizer {
 
 
 	private HashMap<String, ArrayList<LanguageModel>> models;
-	private int taileVoc1;
-	private int taileVoc2;
 
-	//fileParam = bigAssConfig
 	public MyLanguageRecognizer2Log(String fileParam){
 		models = new HashMap();
 		

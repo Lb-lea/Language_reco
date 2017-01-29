@@ -9,15 +9,14 @@ import java.util.HashMap;
 
 /**
  *
- * This LG is able to compute 2 or more level of language models.*/
+ * This LG is able to compute 2 or more level of language models
+ * and uses logarithmic probabilities*/
 
 public class MyLanguageRecognizer3Log extends LanguageRecognizer {
 
-
-
     private HashMap<String, ArrayList<LanguageModel>> models;
 
-    //fileParam = bigAssConfig
+
     public MyLanguageRecognizer3Log(String fileParam){
         models = new HashMap();
 
@@ -55,7 +54,7 @@ public class MyLanguageRecognizer3Log extends LanguageRecognizer {
             ArrayList<LanguageModel> tmpArr = models.get(lang);
             double proba1 = tmpArr.get(0).getSentenceProb(sentence);
             double proba2 = tmpArr.get(1).getSentenceProb(sentence);
-            double res = proba2+proba1; // trigram+bigram
+            double res = proba2+proba1; // probabilité log trigram+bigram
             if(res>max){
                 max = res;
                 lan = lang;

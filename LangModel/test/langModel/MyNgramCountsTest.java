@@ -35,19 +35,19 @@ public class MyNgramCountsTest {
 	
 	@Test
 	public void testScanTextString() {
-		String texte = "<s> bonjour </s>\n<s> Ce cours est enlisant </s>";
+		String texte = "<s> bonjour </s>\n<s> Ce cours est genial </s>";
 		ngramText.scanTextString(texte, 2);
 		assertEquals(2, ngramText.getCounts("<s>"));
 		assertEquals(2,ngramText.getMaximalOrder());
 		assertEquals(9,ngramText.getTotalWordNumber());
 		assertEquals(14,ngramText.getNgramCounterSize());
-		ngramText.writeNgramCountFile("../data/train/ngramtest.txt");
+		ngramText.writeNgramCountFile("test/langModel/ngramtest.txt");
 
 	}
 
 	@Test
 	public void testScanTextFile(){
-		ngramFile.scanTextFile("../data/train/sample-fr.txt",3);
+		ngramFile.scanTextFile("test/langModel/sample-fr.txt",3);
 		//<s> la phrase est la phrase est la phrase </s>
 		//<s> un arbre dans la plaine pousse avec amour </s>
 		assertEquals(2, ngramFile.getCounts("est la"));
@@ -58,7 +58,7 @@ public class MyNgramCountsTest {
 
 	@Test
 	public void testReadFile() {
-		ngramRead.readNgramCountsFile("../data/train/ngramtest.txt");
+		ngramRead.readNgramCountsFile("test/langModel/ngramtest.txt");
 		assertEquals(1, ngramRead.getCounts("bonjour"));
 		assertEquals(2,ngramRead.getMaximalOrder());
 		assertEquals(9,ngramRead.getTotalWordNumber());

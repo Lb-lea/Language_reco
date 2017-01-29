@@ -20,7 +20,7 @@ public class MyLanguageRecognizer3 extends LanguageRecognizer {
 
     private HashMap<String, ArrayList<LanguageModel>> models;
 
-    //fileParam = bigAssConfig
+    //fileParam doit comporter des chemins vers d'autres fichiers de configuration
     public MyLanguageRecognizer3(String fileParam){
         models = new HashMap();
 
