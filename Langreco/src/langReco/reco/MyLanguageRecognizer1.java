@@ -40,7 +40,7 @@ public class MyLanguageRecognizer1 extends LanguageRecognizer {
 	@Override
 	public String recognizeSentenceLanguage(String sentence) {
 		double size = sentence.split(" ").length;
-		double max = Math.pow(Math.pow(10, -5),size);
+		double max = 0;
 		String lan = "ukn";
 		for (String s : models.keySet()){
 			double proba = models.get(s).getSentenceProb(sentence);

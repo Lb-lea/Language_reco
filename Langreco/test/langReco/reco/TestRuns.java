@@ -19,7 +19,7 @@ public class TestRuns {
         LanguageRecognizer my3 = new MyLanguageRecognizer3("lm/ULTIME_CONFIG.txt");
 
         String hypLangFilePath = "data/gold/test-sent-hyp.txt";
-        //my1.recognizeFileLanguage(goldSentPath, hypLangFilePath+"1");
+        my1.recognizeFileLanguage(goldSentPath, hypLangFilePath+"1");
         //my2.recognizeFileLanguage(goldSentPath, hypLangFilePath+"2");
         //my3.recognizeFileLanguage(goldSentPath, hypLangFilePath+"3");
 

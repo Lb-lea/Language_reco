@@ -27,7 +27,7 @@ public class MyLanguageRecognizer3Test {
 
 	@Test
 	public void testMyLanguageRecognizer3() {
-		String cc = "-2";
+		String cc = "-20";
 		String goldSentPath = "data/gold/gold-sent"+cc+".txt";
 		String goldLangPath = "data/gold/gold-lang"+cc+".txt";
 
