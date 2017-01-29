@@ -18,6 +18,11 @@ public class MyNaiveLanguageTest {
         return  nlm;
     }
 
+    @Test
+    public void testVocabularySize(){
+        MyNaiveLanguageModel nlm = this.set();
+        assertEquals(13,nlm.getVocabularySize());
+    }
 
 
     @Test
@@ -34,8 +39,13 @@ public class MyNaiveLanguageTest {
     @Test
     public void testSentenceProb() {
         MyNaiveLanguageModel nlm = this.set();
-        System.out.println(nlm.getSentenceProb("<s> Ce cours est la </s>"));
-        assertEquals(0.008,(double)nlm.getSentenceProb("<s> Ce cours est la </s>"),0.001);//dela =precision
+        assertEquals((double)4/21, (double) nlm.getNgramProb("<s>"), 0.001);
+        assertEquals((double)1/4, (double) nlm.getNgramProb("<s> Ce"), 0.001);
+        assertEquals((double)1, (double) nlm.getNgramProb("Ce cours"), 0.001);
+        assertEquals((double)1, (double) nlm.getNgramProb("cours est"), 0.001);
+        assertEquals((double)1/3, (double) nlm.getNgramProb("est la"), 0.001);
+        assertEquals((double)1, (double) nlm.getNgramProb("la </s>"), 0.001);
+        assertEquals((double)(4/(double)(21*4*3)),(double)nlm.getSentenceProb("<s> Ce cours est la </s>"),0.001);//dela =precision
     }
 
 }
