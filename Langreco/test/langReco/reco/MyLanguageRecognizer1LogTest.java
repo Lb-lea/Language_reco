@@ -28,7 +28,7 @@ public class MyLanguageRecognizer1LogTest {
 		// or use the following if you want to consider all the languages
 		// LanguageRecognizer baseline = new BaselineLanguageRecognizer();
 
-		String hypLangFilePath = "data/gold/gold-test-reco1-log-bi"+cc+".txt";
+		String hypLangFilePath = "data/test/gold-test-reco1-log-bi"+cc+".txt";
 		my1.recognizeFileLanguage(goldSentPath, hypLangFilePath);
 		System.out.printf("System performance = %f\n", Performance.evaluate(goldLangPath, hypLangFilePath));
 	}
@@ -44,7 +44,7 @@ public class MyLanguageRecognizer1LogTest {
 		// or use the following if you want to consider all the languages
 		// LanguageRecognizer baseline = new BaselineLanguageRecognizer();
 
-		String hypLangFilePath = "data/gold/gold-test-reco1-log-tri"+cc+".txt";
+		String hypLangFilePath = "data/test/gold-test-reco1-log-tri"+cc+".txt";
 		my1.recognizeFileLanguage(goldSentPath, hypLangFilePath);
 		System.out.printf("System performance = %f\n", Performance.evaluate(goldLangPath, hypLangFilePath));
 	}

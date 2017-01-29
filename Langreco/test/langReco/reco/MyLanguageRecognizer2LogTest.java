@@ -21,7 +21,7 @@ public class MyLanguageRecognizer2LogTest {
         LanguageRecognizer my1 = new MyLanguageRecognizer2Log("lm/ULTIME_CONFIG.txt");
 
 
-        String hypLangFilePath = "data/gold/gold-test-reco2-log"+cc+".txt";
+        String hypLangFilePath = "data/test/gold-test-reco2-log"+cc+".txt";
         my1.recognizeFileLanguage(goldSentPath, hypLangFilePath);
         System.out.printf("System performance = %f\n", Performance.evaluate(goldLangPath, hypLangFilePath));
     }

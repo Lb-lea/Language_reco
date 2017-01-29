@@ -28,7 +28,7 @@ public class MyLanguageRecognizer3LogTest {
 		// or use the following if you want to consider all the languages
 		// LanguageRecognizer baseline = new BaselineLanguageRecognizer();
 
-		String hypLangFilePath = "data/gold/gold-test-reco3-log"+cc+".txt";
+		String hypLangFilePath = "data/test/gold-test-reco3-log"+cc+".txt";
 		my1.recognizeFileLanguage(goldSentPath, hypLangFilePath);
 		System.out.printf("System performance = %f\n", Performance.evaluate(goldLangPath, hypLangFilePath));
 	}
