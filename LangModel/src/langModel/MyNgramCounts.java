@@ -97,13 +97,11 @@ public class MyNgramCounts implements NgramCounts {
 			if(ngram.split("\\s+").length==1){
 				nbWordsTotal++;
 			}
-			//System.out.println(ngram+"+"+ngramCounts.get(ngram));
 		}
 
 		else {
 
 			setCounts(ngram, 1);
-			//System.out.println(ngram + "=" + ngramCounts.get(ngram));
 		}
 
 	}

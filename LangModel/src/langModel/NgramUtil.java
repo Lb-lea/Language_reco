@@ -48,7 +48,7 @@ public class NgramUtil {
 				for (int i = Math.max(getSequenceSize(ngram)-order,0) ; i < getSequenceSize(ngram)-1; i++) {
 					ret_String += splitted[i]+" ";
 				}
-				ret_String = ret_String.trim();//deletting that extra spce
+				ret_String = ret_String.trim();//deleting that extra space
 			}
 
 		}
@@ -136,7 +136,7 @@ public class NgramUtil {
 		{
 			for (int i = 0; i < getSequenceSize(sentence)-(order-1) ; i++) {
 				ngram = "";
-				//starting prom our iterator index, we look up until as many word as the order
+				//starting from our iterator index, we look up until as many word as the order
 				for (it_order = i; it_order < i + order; it_order++) {
 					ngram+= splitted[it_order]+" ";
 				}
