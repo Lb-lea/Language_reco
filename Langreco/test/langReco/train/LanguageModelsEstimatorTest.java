@@ -177,7 +177,7 @@ public class LanguageModelsEstimatorTest {
 	}
 	
 	@Test
-	public void TOOMUCHPOWER(){
+	public void testConfigTrigram(){
 		try{
 			FileWriter fw = new FileWriter("lm/fichConfig_trigram-100.txt");
 				fw.append("en\ten_tri\tlm/trigram"+lmEnFilePath+"\n");
@@ -198,7 +198,7 @@ public class LanguageModelsEstimatorTest {
 	}
 	
 	@Test
-	public void MERGINGCOMPLETE(){
+	public void testConfigAll(){
 		try{
 			FileWriter fw = new FileWriter("lm/ULTIME_CONFIG.txt");
 				fw.append("fichConfig_bigram-100.txt\n");
